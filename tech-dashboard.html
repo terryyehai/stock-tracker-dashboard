@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台股科技黑馬追蹤</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        .header h1 { 
+            font-size: 2.5rem; 
+            background: linear-gradient(90deg, #00d4ff, #7b2ff7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 2px;
+        }
+        .badge.tech { background: linear-gradient(90deg, #00d4ff, #7b2ff7); }
+        .badge.lead { background: linear-gradient(90deg, #f7b731, #ea8685); }
+        
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 1.3rem;
+            padding: 15px 20px;
+            border-left: 4px solid #00d4ff;
+            background: rgba(0,212,255,0.1);
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 20px;
+        }
+        
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 15px;
+        }
+        .stock-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .stock-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border-color: #00d4ff;
+        }
+        
+        .stock-name { font-size: 1.4rem; font-weight: bold; color: #00d4ff; }
+        .stock-code { opacity: 0.6; font-size: 0.9rem; }
+        .stock-tech { 
+            background: linear-gradient(90deg, #7b2ff7, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+        
+        .scores {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .score-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        .score-value { font-size: 1.5rem; font-weight: bold; }
+        .score-label { font-size: 0.8rem; opacity: 0.7; }
+        
+        .high-score { color: #4ade80; }
+        .med-score { color: #f7b731; }
+        
+        .tech-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background: rgba(123,47,247,0.3);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 2px;
+        }
+        
+        .footer { text-align: center; opacity: 0.5; margin-top: 30px; }
+        
+        @media (max-width: 768px) {
+            .stock-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 台股科技黑馬追蹤</h1>
+        <p>領先技術 • 未來趨勢 • 成長潛力</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">💎 半導體先進製程</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">台積電</div>
+                <div class="stock-code">2330</div>
+                <div class="stock-tech">3nm/5nm製程</div>
+                <div class="tech-tag">先進製程</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">10</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">8</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🤖 AI 與高效能運算</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">聯發科</div>
+                <div class="stock-code">2454</div>
+                <div class="stock-tech">手機晶片/AI處理器</div>
+                <div class="tech-tag">AI晶片</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">2</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">聯詠</div>
+                <div class="stock-code">3034</div>
+                <div class="stock-tech">AI IP/IC設計</div>
+                <div class="tech-tag">AI晶片</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">2</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">創意</div>
+                <div class="stock-code">3443</div>
+                <div class="stock-tech">AI ASIC設計</div>
+                <div class="tech-tag">AI晶片</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">2</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">世芯-KY</div>
+                <div class="stock-code">3661</div>
+                <div class="stock-tech">AI ASIC設計</div>
+                <div class="tech-tag">AI晶片</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">2</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📦 先進封裝技術</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">欣興</div>
+                <div class="stock-code">3037</div>
+                <div class="stock-tech">ABF/CoWoS封裝</div>
+                <div class="tech-tag">先進封裝</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">景碩</div>
+                <div class="stock-code">3189</div>
+                <div class="stock-tech">ABF/載板</div>
+                <div class="tech-tag">先進封裝</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">9</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🖥️ AI 伺服器與資料中心</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">廣達</div>
+                <div class="stock-code">2382</div>
+                <div class="stock-tech">AI伺服器/L20</div>
+                <div class="tech-tag">AI伺服器</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">4</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">緯創</div>
+                <div class="stock-code">3231</div>
+                <div class="stock-tech">AI伺服器</div>
+                <div class="tech-tag">AI伺服器</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">4</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">緯穎</div>
+                <div class="stock-code">6669</div>
+                <div class="stock-tech">AI伺服器/OEM</div>
+                <div class="tech-tag">AI伺服器</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">4</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">❄️ 散熱解決方案</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">奇鋐</div>
+                <div class="stock-code">3017</div>
+                <div class="stock-tech">液冷/散熱模組</div>
+                <div class="tech-tag">散熱</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">3</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">同泰</div>
+                <div class="stock-code">3321</div>
+                <div class="stock-tech">散熱解決方案</div>
+                <div class="tech-tag">散熱</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">3</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🧬 生技醫療科技</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">藥華藥</div>
+                <div class="stock-code">6446</div>
+                <div class="stock-tech">生物藥物</div>
+                <div class="tech-tag">生技</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">保瑞</div>
+                <div class="stock-code">6472</div>
+                <div class="stock-tech">CDMO</div>
+                <div class="tech-tag">生技</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🚗 電動車與自駕技術</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">為升</div>
+                <div class="stock-code">2231</div>
+                <div class="stock-tech">車用雷達/ADAS</div>
+                <div class="tech-tag">車用電子</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">6</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">3</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">百達-KY</div>
+                <div class="stock-code">2236</div>
+                <div class="stock-tech">車用鏡頭/ADAS</div>
+                <div class="tech-tag">車用電子</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">6</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">3</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">宇隆</div>
+                <div class="stock-code">2233</div>
+                <div class="stock-tech">精密加工/車用</div>
+                <div class="tech-tag">車用電子</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">6</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">7</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">3</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🔋 儲能與新能源</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">AES-KY</div>
+                <div class="stock-code">6817</div>
+                <div class="stock-tech">儲能系統</div>
+                <div class="tech-tag">儲能</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">6</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">4</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">泓德能源</div>
+                <div class="stock-code">6873</div>
+                <div class="stock-tech">儲能/綠電</div>
+                <div class="tech-tag">儲能</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">6</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value high-score">8</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">4</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">高速傳輸</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">威鋒電子</div>
+                <div class="stock-code">6756</div>
+                <div class="stock-tech">USB4/Type-C</div>
+                <div class="tech-tag">高速傳輸</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">先進封測</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">南電</div>
+                <div class="stock-code">8046</div>
+                <div class="stock-tech">ABF載板</div>
+                <div class="tech-tag">先進封測</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">矽格</div>
+                <div class="stock-code">6257</div>
+                <div class="stock-tech">IC封測</div>
+                <div class="tech-tag">先進封測</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">電網</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">華城</div>
+                <div class="stock-code">1519</div>
+                <div class="stock-tech">變壓器/重電</div>
+                <div class="tech-tag">電網</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🛰️ 低軌衛星通訊</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">競國</div>
+                <div class="stock-code">6108</div>
+                <div class="stock-tech">衛星PCB</div>
+                <div class="tech-tag">衛星</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">網通</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">啟碁</div>
+                <div class="stock-code">6285</div>
+                <div class="stock-tech">衛星通訊模組</div>
+                <div class="tech-tag">網通</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">機器人</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">豐達科</div>
+                <div class="stock-code">3004</div>
+                <div class="stock-tech">機器人軸承</div>
+                <div class="tech-tag">機器人</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">風電</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">上緯投控</div>
+                <div class="stock-code">3708</div>
+                <div class="stock-tech">離岸風電</div>
+                <div class="tech-tag">風電</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">醫療</div>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="stock-name">佳醫</div>
+                <div class="stock-code">4104</div>
+                <div class="stock-tech">醫材/AI醫療</div>
+                <div class="tech-tag">醫療</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">技術領先</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value med-score">5</div>
+                        <div class="score-label">市場潛力</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value">5</div>
+                        <div class="score-label">護城河</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        更新時間: 2026-03-26 13:29
+    </div>
+</body>
+</html>
