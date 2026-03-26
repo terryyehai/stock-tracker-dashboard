@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台股科技黑馬 Top 30</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #f85149, #d29922);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        .subtitle { opacity: 0.8; margin-top: 10px; }
+        
+        .top-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg, #f85149, #d29922);
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 10px;
+        }
+        
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .stock-table th {
+            background: rgba(248, 81, 73, 0.3);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .stock-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .stock-table tr:hover { background: rgba(255,255,255,0.05); }
+        
+        .rank { font-weight: bold; color: #d29922; }
+        .rank-1, .rank-2, .rank-3 { color: #f85149; font-size: 1.2rem; }
+        
+        .cat-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            background: rgba(139, 92, 246, 0.3);
+        }
+        
+        .score { 
+            font-weight: bold; 
+            color: #4ade80;
+            font-size: 1.1rem;
+        }
+        
+        .footer { text-align: center; opacity: 0.5; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 台股科技黑馬 Top 30</h1>
+        <p class="subtitle">有目的地發掘 • 趨勢、技術、價值綜合評分</p>
+    </div>
+    
+    <div style="text-align:center;">
+        <span class="top-badge">🔥 採用主動發現邏輯</span>
+    </div>
+    
+    <table class="stock-table">
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>代碼</th>
+                <th>名稱</th>
+                <th>技術類別</th>
+                <th>趨勢熱度</th>
+                <th>技術權重</th>
+                <th>本益比</th>
+                <th>殖利率</th>
+                <th>黑馬分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="rank-1">1</td>
+                <td>2408</td>
+                <td><strong>南亞科</strong></td>
+                <td><span class="cat-tag" style="background:#d2992240">HBM記憶體</span></td>
+                <td>50</td>
+                <td>9</td>
+                <td>20</td>
+                <td>1.5%</td>
+                <td class="score">37.9</td>
+            </tr>
+            <tr>
+                <td class="rank-2">2</td>
+                <td>3037</td>
+                <td><strong>欣興</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>12</td>
+                <td>4.2%</td>
+                <td class="score">37.4</td>
+            </tr>
+            <tr>
+                <td class="rank-3">3</td>
+                <td>8046</td>
+                <td><strong>南電</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>10</td>
+                <td>5.5%</td>
+                <td class="score">37.4</td>
+            </tr>
+            <tr>
+                <td class="rank">4</td>
+                <td>3711</td>
+                <td><strong>日月光</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>11</td>
+                <td>4.0%</td>
+                <td class="score">37.4</td>
+            </tr>
+            <tr>
+                <td class="rank">5</td>
+                <td>2344</td>
+                <td><strong>華邦電</strong></td>
+                <td><span class="cat-tag" style="background:#d2992240">HBM記憶體</span></td>
+                <td>50</td>
+                <td>9</td>
+                <td>25</td>
+                <td>1.0%</td>
+                <td class="score">37.4</td>
+            </tr>
+            <tr>
+                <td class="rank">6</td>
+                <td>3189</td>
+                <td><strong>景碩</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>14</td>
+                <td>3.0%</td>
+                <td class="score">36.9</td>
+            </tr>
+            <tr>
+                <td class="rank">7</td>
+                <td>6257</td>
+                <td><strong>矽格</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>16</td>
+                <td>2.8%</td>
+                <td class="score">36.5</td>
+            </tr>
+            <tr>
+                <td class="rank">8</td>
+                <td>2330</td>
+                <td><strong>台積電</strong></td>
+                <td><span class="cat-tag" style="background:#8b5cf640">先進封裝</span></td>
+                <td>50</td>
+                <td>8</td>
+                <td>22</td>
+                <td>1.8%</td>
+                <td class="score">36.0</td>
+            </tr>
+            <tr>
+                <td class="rank">9</td>
+                <td>2233</td>
+                <td><strong>宇隆</strong></td>
+                <td><span class="cat-tag" style="background:#4ade8040">新能源車</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>12</td>
+                <td>4.0%</td>
+                <td class="score">35.6</td>
+            </tr>
+            <tr>
+                <td class="rank">10</td>
+                <td>4915</td>
+                <td><strong>致伸</strong></td>
+                <td><span class="cat-tag" style="background:#4ade8040">新能源車</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>14</td>
+                <td>3.5%</td>
+                <td class="score">35.1</td>
+            </tr>
+            <tr>
+                <td class="rank">11</td>
+                <td>3324</td>
+                <td><strong>雙鴻</strong></td>
+                <td><span class="cat-tag" style="background:#22d3ee40">散熱技術</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>18</td>
+                <td>2.5%</td>
+                <td class="score">34.7</td>
+            </tr>
+            <tr>
+                <td class="rank">12</td>
+                <td>6155</td>
+                <td><strong>泰碩</strong></td>
+                <td><span class="cat-tag" style="background:#22d3ee40">散熱技術</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>15</td>
+                <td>3.2%</td>
+                <td class="score">34.7</td>
+            </tr>
+            <tr>
+                <td class="rank">13</td>
+                <td>2231</td>
+                <td><strong>為升</strong></td>
+                <td><span class="cat-tag" style="background:#4ade8040">新能源車</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>20</td>
+                <td>2.0%</td>
+                <td class="score">34.7</td>
+            </tr>
+            <tr>
+                <td class="rank">14</td>
+                <td>3017</td>
+                <td><strong>奇鋐</strong></td>
+                <td><span class="cat-tag" style="background:#22d3ee40">散熱技術</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>22</td>
+                <td>1.8%</td>
+                <td class="score">34.2</td>
+            </tr>
+            <tr>
+                <td class="rank">15</td>
+                <td>3321</td>
+                <td><strong>同泰</strong></td>
+                <td><span class="cat-tag" style="background:#22d3ee40">散熱技術</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>30</td>
+                <td>0.8%</td>
+                <td class="score">33.8</td>
+            </tr>
+            <tr>
+                <td class="rank">16</td>
+                <td>2236</td>
+                <td><strong>百達-KY</strong></td>
+                <td><span class="cat-tag" style="background:#4ade8040">新能源車</span></td>
+                <td>50</td>
+                <td>7</td>
+                <td>25</td>
+                <td>1.5%</td>
+                <td class="score">33.8</td>
+            </tr>
+            <tr>
+                <td class="rank">17</td>
+                <td>6108</td>
+                <td><strong>競國</strong></td>
+                <td><span class="cat-tag" style="background:#fb923c40">衛星通訊</span></td>
+                <td>50</td>
+                <td>6</td>
+                <td>12</td>
+                <td>4.5%</td>
+                <td class="score">33.8</td>
+            </tr>
+            <tr>
+                <td class="rank">18</td>
+                <td>6285</td>
+                <td><strong>啟碁</strong></td>
+                <td><span class="cat-tag" style="background:#fb923c40">衛星通訊</span></td>
+                <td>50</td>
+                <td>6</td>
+                <td>18</td>
+                <td>2.5%</td>
+                <td class="score">32.9</td>
+            </tr>
+            <tr>
+                <td class="rank">19</td>
+                <td>3708</td>
+                <td><strong>上緯投控</strong></td>
+                <td><span class="cat-tag" style="background:#f472b640">儲能</span></td>
+                <td>50</td>
+                <td>5</td>
+                <td>15</td>
+                <td>5.0%</td>
+                <td class="score">31.6</td>
+            </tr>
+            <tr>
+                <td class="rank">20</td>
+                <td>6817</td>
+                <td><strong>AES-KY</strong></td>
+                <td><span class="cat-tag" style="background:#f472b640">儲能</span></td>
+                <td>50</td>
+                <td>5</td>
+                <td>25</td>
+                <td>2.0%</td>
+                <td class="score">30.7</td>
+            </tr>
+            <tr>
+                <td class="rank">21</td>
+                <td>6873</td>
+                <td><strong>泓德能源</strong></td>
+                <td><span class="cat-tag" style="background:#f472b640">儲能</span></td>
+                <td>50</td>
+                <td>5</td>
+                <td>30</td>
+                <td>1.2%</td>
+                <td class="score">30.2</td>
+            </tr>
+            <tr>
+                <td class="rank">22</td>
+                <td>1519</td>
+                <td><strong>華城</strong></td>
+                <td><span class="cat-tag" style="background:#f472b640">儲能</span></td>
+                <td>50</td>
+                <td>5</td>
+                <td>35</td>
+                <td>1.3%</td>
+                <td class="score">30.2</td>
+            </tr>
+            <tr>
+                <td class="rank">23</td>
+                <td>3034</td>
+                <td><strong>聯詠</strong></td>
+                <td><span class="cat-tag" style="background:#f8514940">矽光子/CPO</span></td>
+                <td>10</td>
+                <td>9</td>
+                <td>15</td>
+                <td>3.5%</td>
+                <td class="score">22.3</td>
+            </tr>
+            <tr>
+                <td class="rank">24</td>
+                <td>4976</td>
+                <td><strong>眾達-KY</strong></td>
+                <td><span class="cat-tag" style="background:#f8514940">矽光子/CPO</span></td>
+                <td>10</td>
+                <td>9</td>
+                <td>20</td>
+                <td>2.0%</td>
+                <td class="score">22.3</td>
+            </tr>
+            <tr>
+                <td class="rank">25</td>
+                <td>3085</td>
+                <td><strong>上詮</strong></td>
+                <td><span class="cat-tag" style="background:#f8514940">矽光子/CPO</span></td>
+                <td>10</td>
+                <td>9</td>
+                <td>18</td>
+                <td>2.1%</td>
+                <td class="score">22.3</td>
+            </tr>
+            <tr>
+                <td class="rank">26</td>
+                <td>5425</td>
+                <td><strong>波若威</strong></td>
+                <td><span class="cat-tag" style="background:#f8514940">矽光子/CPO</span></td>
+                <td>10</td>
+                <td>9</td>
+                <td>25</td>
+                <td>1.5%</td>
+                <td class="score">21.4</td>
+            </tr>
+            <tr>
+                <td class="rank">27</td>
+                <td>2454</td>
+                <td><strong>聯發科</strong></td>
+                <td><span class="cat-tag" style="background:#6366f140">AI晶片</span></td>
+                <td>10</td>
+                <td>8</td>
+                <td>18</td>
+                <td>2.5%</td>
+                <td class="score">20.5</td>
+            </tr>
+            <tr>
+                <td class="rank">28</td>
+                <td>3443</td>
+                <td><strong>創意</strong></td>
+                <td><span class="cat-tag" style="background:#6366f140">AI晶片</span></td>
+                <td>10</td>
+                <td>8</td>
+                <td>25</td>
+                <td>1.2%</td>
+                <td class="score">19.6</td>
+            </tr>
+            <tr>
+                <td class="rank">29</td>
+                <td>3661</td>
+                <td><strong>世芯-KY</strong></td>
+                <td><span class="cat-tag" style="background:#6366f140">AI晶片</span></td>
+                <td>10</td>
+                <td>8</td>
+                <td>30</td>
+                <td>0.8%</td>
+                <td class="score">19.6</td>
+            </tr>
+            <tr>
+                <td class="rank">30</td>
+                <td>6756</td>
+                <td><strong>威鋒電子</strong></td>
+                <td><span class="cat-tag" style="background:#6366f140">AI晶片</span></td>
+                <td>10</td>
+                <td>8</td>
+                <td>28</td>
+                <td>1.2%</td>
+                <td class="score">19.6</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="footer">更新: 2026-03-26 16:03</div>
+</body>
+</html>
