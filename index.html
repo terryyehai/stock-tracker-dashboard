@@ -4,90 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📈 Stock Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * { box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            margin: 0; padding: 20px; background: #f5f5f5;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
         h1 { color: #333; text-align: center; margin-bottom: 30px; }
-        
         .container { max-width: 1200px; margin: 0 auto; }
-        
-        .stats { 
-            display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; 
-            flex-wrap: wrap;
-        }
-        .stat-box { 
-            background: white; padding: 20px 40px; border-radius: 12px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
-        }
+        .stats { display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+        .stat-box { background: white; padding: 20px 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
         .stat-box h3 { margin: 0 0 8px 0; color: #666; font-size: 14px; }
         .stat-box .value { font-size: 28px; font-weight: bold; color: #333; }
-        
         .section { margin-bottom: 40px; }
         .section h2 { color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
-        
-        table { 
-            width: 100%; border-collapse: collapse; background: white; 
-            border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
         th { background: #4CAF50; color: white; font-weight: 600; }
         tr:hover { background: #f9f9f9; }
-        
         .gain { color: #4CAF50; font-weight: 600; }
         .loss { color: #f44336; font-weight: 600; }
-        
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-        .tab { 
-            padding: 10px 20px; background: white; border: 2px solid #4CAF50; 
-            border-radius: 20px; cursor: pointer; color: #4CAF50; font-weight: 600;
-        }
+        .tab { padding: 10px 20px; background: white; border: 2px solid #4CAF50; border-radius: 20px; cursor: pointer; color: #4CAF50; font-weight: 600; }
         .tab.active { background: #4CAF50; color: white; }
-        
         .chart-container { background: white; padding: 20px; border-radius: 12px; margin-top: 20px; }
-        
-        .search-box {
-            width: 100%; padding: 12px; font-size: 16px; 
-            border: 2px solid #ddd; border-radius: 8px; margin-bottom: 20px;
-        }
-        
-        .sql-box {
-            background: white; padding: 20px; border-radius: 12px;
-        }
-        .sql-box textarea {
-            width: 100%; height: 120px; font-family: monospace; font-size: 14px;
-            padding: 12px; border: 2px solid #ddd; border-radius: 8px;
-        }
-        .sql-box button {
-            background: #4CAF50; color: white; padding: 12px 24px; 
-            border: none; border-radius: 8px; cursor: pointer; font-size: 16px;
-            margin-top: 10px;
-        }
-        .sql-result { margin-top: 20px; overflow-x: auto; }
-        
-        @media (max-width: 600px) {
-            .stats { flex-direction: column; align-items: center; }
-            th, td { padding: 8px 10px; font-size: 14px; }
-        }
+        .sql-box { background: white; padding: 20px; border-radius: 12px; }
+        .sql-box textarea { width: 100%; height: 120px; font-family: monospace; font-size: 14px; padding: 12px; border: 2px solid #ddd; border-radius: 8px; }
+        .sql-box button { background: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        pre { background: #263238; color: #aed581; padding: 15px; border-radius: 8px; overflow-x: auto; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📈 台股儀表板</h1>
-        
         <div class="stats">
-            <div class="stat-box">
-                <h3>股票數</h3>
-                <div class="value" id="totalStocks">-</div>
-            </div>
-            <div class="stat-box">
-                <h3>更新日期</h3>
-                <div class="value" id="latestDate">-</div>
-            </div>
+            <div class="stat-box"><h3>股票數</h3><div class="value" id="totalStocks">載入中...</div></div>
+            <div class="stat-box"><h3>更新日期</h3><div class="value" id="latestDate">-</div></div>
         </div>
-        
         <div class="tabs">
             <div class="tab active" onclick="showTab('watchlist')">⭐ 追蹤名單</div>
             <div class="tab" onclick="showTab('gainers')">🟢 漲幅排行</div>
@@ -96,99 +47,74 @@
             <div class="tab" onclick="showTab('sql')">🔍 SQL 查詢</div>
         </div>
         
-        <!-- Watchlist Tab -->
         <div id="watchlist" class="tab-content">
             <h2>⭐ 追蹤名單</h2>
-            <table id="watchlistTable">
-                <tr><th>代碼</th><th>開盤</th><th>最高</th><th>最低</th><th>收盤</th><th>漲跌幅</th></tr>
-            </table>
+            <table id="watchlistTable"><tr><th>代碼</th><th>開盤</th><th>最高</th><th>最低</th><th>收盤</th><th>漲跌幅</th></tr></table>
         </div>
         
-        <!-- Gainers Tab -->
         <div id="gainers" class="tab-content" style="display:none">
             <h2>🟢 漲幅排行 (Top 10)</h2>
-            <table id="gainersTable">
-                <tr><th>代碼</th><th>收盤</th><th>漲幅 %</th></tr>
-            </table>
+            <table id="gainersTable"><tr><th>代碼</th><th>收盤</th><th>漲幅 %</th></tr></table>
         </div>
         
-        <!-- Losers Tab -->
         <div id="losers" class="tab-content" style="display:none">
             <h2>🔴 跌幅排行 (Top 10)</h2>
-            <table id="losersTable">
-                <tr><th>代碼</th><th>收盤</th><th>跌幅 %</th></tr>
-            </table>
+            <table id="losersTable"><tr><th>代碼</th><th>收盤</th><th>跌幅 %</th></tr></table>
         </div>
         
-        <!-- History Tab -->
         <div id="history" class="tab-content" style="display:none">
             <h2>📊 歷史走勢</h2>
-            <select id="stockSelect" onchange="showHistory()" style="padding: 10px; font-size: 16px; margin-bottom: 20px;">
-            </select>
-            <div class="chart-container">
-                <canvas id="chart"></canvas>
-            </div>
-            <table id="historyTable">
-                <tr><th>日期</th><th>開盤</th><th>最高</th><th>最低</th><th>收盤</th><th>成交量</th></tr>
-            </table>
+            <select id="stockSelect" onchange="showHistory()" style="padding: 10px; font-size: 16px; margin-bottom: 20px;"></select>
+            <div class="chart-container"><canvas id="chart"></canvas></div>
+            <table id="historyTable"><tr><th>日期</th><th>開盤</th><th>最高</th><th>最低</th><th>收盤</th><th>成交量</th></tr></table>
         </div>
         
-        <!-- SQL Tab -->
         <div id="sql" class="tab-content" style="display:none">
             <h2>🔍 SQL 查詢</h2>
             <div class="sql-box">
-                <textarea id="sqlInput" placeholder="SELECT * FROM daily_prices WHERE code='2330'">
-SELECT code, close_price, date FROM daily_prices WHERE code='2330' ORDER BY date DESC LIMIT 10</textarea>
+                <textarea id="sqlInput">SELECT * FROM all WHERE code='2330' AND date='2026-04-02'</textarea>
                 <button onclick="runQuery()">執行查詢</button>
                 <div class="sql-result" id="sqlResult"></div>
             </div>
             <h3>📝 範例查詢</h3>
-            <pre style="background: #263238; color: #aed581; padding: 15px; border-radius: 8px; overflow-x: auto;">
+            <pre>
 -- 查詢台積電最近10天
-SELECT * FROM daily_prices WHERE code='2330' ORDER BY date DESC LIMIT 10
+SELECT * FROM all WHERE code='2330' ORDER BY date DESC LIMIT 10
 
--- 查詢漲幅超過5%
-SELECT code, close_price, ((close_price - open_price) / open_price * 100) as pct 
-FROM daily_prices WHERE date='2026-04-02' AND pct > 5
+-- 漲幅超過5%
+SELECT * FROM all WHERE date='2026-04-02' AND ((close - open) / open * 100) > 5
 
--- 查詢所有ETF
-SELECT * FROM daily_prices WHERE code LIKE '005%' AND date='2026-04-02'
+-- 所有ETF
+SELECT * FROM all WHERE code LIKE '005%' AND date='2026-04-02'
 
 -- 量大於1000萬股
-SELECT code, volume FROM daily_prices WHERE date='2026-04-02' AND volume > 10000000</pre>
+SELECT * FROM all WHERE date='2026-04-02' AND volume > 10000000</pre>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         let stockData = null;
         
-        // Load data
-        fetch('data.json')
-            .then(r => r.json())
-            .then(data => {
-                stockData = data;
-                initDashboard();
-            });
+        fetch('data.json').then(r => r.json()).then(data => {
+            stockData = data;
+            initDashboard();
+        });
         
         function initDashboard() {
             const latest = stockData.latest;
             document.getElementById('totalStocks').textContent = latest.length;
             document.getElementById('latestDate').textContent = '2026-04-02';
             
-            // Watchlist
             const watchlist = ["2330", "2454", "2317", "2603", "0050", "2885", "1303"];
             const watchData = latest.filter(s => watchlist.includes(s.code));
-            const watchHistory = stockData.history;
-            
             const watchTable = document.getElementById('watchlistTable');
+            
             watchData.forEach(s => {
-                const hist = watchHistory[s.code]?.[0] || {};
-                const pct = hist.close ? ((s.close - hist.open) / hist.open * 100).toFixed(2) : 0;
-                const cls = pct >= 0 ? 'gain' : 'loss';
+                const yesData = stockData.all.find(r => r.code === s.code && r.date === '2026-04-01');
+                const pct = yesData ? ((s.close - yesData.open) / yesData.open * 100).toFixed(2) : "0.00";
+                const cls = parseFloat(pct) >= 0 ? 'gain' : 'loss';
                 watchTable.innerHTML += `<tr>
                     <td>${s.code}</td>
-                    <td>${hist.open?.toFixed(2) || '-'}</td>
+                    <td>${s.open?.toFixed(2) || '-'}</td>
                     <td>${s.high?.toFixed(2) || '-'}</td>
                     <td>${s.low?.toFixed(2) || '-'}</td>
                     <td>${s.close?.toFixed(2) || '-'}</td>
@@ -196,83 +122,43 @@ SELECT code, volume FROM daily_prices WHERE date='2026-04-02' AND volume > 10000
                 </tr>`;
             });
             
-            // Gainers
-            const sorted = [...latest].sort((a, b) => {
-                const pctA = (a.close - a.open) / a.open;
-                const pctB = (b.close - b.open) / b.open;
-                return pctB - pctA;
-            });
-            
-            const gainersTable = document.getElementById('gainersTable');
+            const sorted = [...latest].sort((a, b) => ((b.close - b.open) / b.open) - ((a.close - a.open) / a.open));
             sorted.slice(0, 10).forEach(s => {
                 const pct = ((s.close - s.open) / s.open * 100).toFixed(2);
-                gainersTable.innerHTML += `<tr><td>${s.code}</td><td>${s.close.toFixed(2)}</td><td class="gain">+${pct}%</td></tr>`;
+                document.getElementById('gainersTable').innerHTML += `<tr><td>${s.code}</td><td>${s.close.toFixed(2)}</td><td class="gain">+${pct}%</td></tr>`;
             });
             
-            // Losers
-            const losersTable = document.getElementById('losersTable');
             sorted.slice(-10).reverse().forEach(s => {
                 const pct = ((s.close - s.open) / s.open * 100).toFixed(2);
-                losersTable.innerHTML += `<tr><td>${s.code}</td><td>${s.close.toFixed(2)}</td><td class="loss">${pct}%</td></tr>`;
+                document.getElementById('losersTable').innerHTML += `<tr><td>${s.code}</td><td>${s.close.toFixed(2)}</td><td class="loss">${pct}%</td></tr>`;
             });
             
-            // Stock select
             const select = document.getElementById('stockSelect');
-            watchlist.forEach(code => {
-                select.innerHTML += `<option value="${code}">${code}</option>`;
-            });
-            
+            watchlist.forEach(code => { select.innerHTML += `<option value="${code}">${code}</option>`; });
             showHistory();
         }
         
         function showTab(tab) {
             document.querySelectorAll('.tab-content').forEach(d => d.style.display = 'none');
             document.getElementById(tab).style.display = 'block';
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            event.target.classList.add('active');
+            document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', t.getAttribute('onclick').includes(tab)));
         }
         
         let chart = null;
         
         function showHistory() {
             const code = document.getElementById('stockSelect').value;
-            const history = stockData.history[code] || [];
+            const history = stockData.all.filter(r => r.code === code).sort((a,b) => a.date.localeCompare(b.date));
             
             const table = document.getElementById('historyTable');
             table.innerHTML = '<tr><th>日期</th><th>開盤</th><th>最高</th><th>最低</th><th>收盤</th><th>成交量</th></tr>';
-            history.forEach(h => {
-                table.innerHTML += `<tr>
-                    <td>${h.date}</td>
-                    <td>${h.open.toFixed(2)}</td>
-                    <td>${h.high.toFixed(2)}</td>
-                    <td>${h.low.toFixed(2)}</td>
-                    <td>${h.close.toFixed(2)}</td>
-                    <td>${h.volume.toLocaleString()}</td>
-                </tr>`;
+            history.slice(-30).reverse().forEach(h => {
+                table.innerHTML += `<tr><td>${h.date}</td><td>${h.open.toFixed(2)}</td><td>${h.high.toFixed(2)}</td><td>${h.low.toFixed(2)}</td><td>${h.close.toFixed(2)}</td><td>${h.volume.toLocaleString()}</td></tr>`;
             });
             
-            // Chart
             const ctx = document.getElementById('chart').getContext('2d');
             if (chart) chart.destroy();
-            
-            chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: history.map(h => h.date).reverse(),
-                    datasets: [{
-                        label: '收盤價',
-                        data: history.map(h => h.close).reverse(),
-                        borderColor: '#4CAF50',
-                        backgroundColor: 'rgba(76, 175, 80, 0.1)',
-                        fill: true,
-                        tension: 0.3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } }
-                }
-            });
+            chart = new Chart(ctx, { type: 'line', data: { labels: history.map(h => h.date).slice(-30), datasets: [{ label: '收盤價', data: history.map(h => h.close).slice(-30), borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.1)', fill: true, tension: 0.3 }] }, options: { responsive: true, plugins: { legend: { display: false } } } });
         }
         
         function runQuery() {
@@ -284,54 +170,37 @@ SELECT code, volume FROM daily_prices WHERE date='2026-04-02' AND volume > 10000
                 return;
             }
             
-            // Full client-side query engine
-            let results = stockData.all.filter(row => {
-                let match = true;
-                
-                // Code filter
-                if (sql.includes("code='2330'")) match = match && row.code === '2330';
-                else if (sql.includes("code='2454'")) match = match && row.code === '2454';
-                else if (sql.includes("code='2317'")) match = match && row.code === '2317';
-                else if (sql.includes("code='2603'")) match = match && row.code === '2603';
-                else if (sql.includes("code='0050'")) match = match && row.code === '0050';
-                else if (sql.includes("like '005%'")) match = match && row.code.startsWith('005');
-                
-                // Date filter
-                if (sql.includes("date='2026-04-02'")) match = match && row.date === '2026-04-02';
-                
-                // PCT filter
-                if (sql.includes("pct > 5")) {
-                    const pct = (row.close - row.open) / row.open * 100;
-                    match = match && pct > 5;
-                }
-                if (sql.includes("volume > 10000000")) {
-                    match = match && row.volume > 10000000;
-                }
-                
-                // Limit
-                return match;
-            });
+            let results = stockData.all;
             
-            // Apply limit if present
+            if (sql.includes("code='2330'")) results = results.filter(r => r.code === '2330');
+            else if (sql.includes("code='2454'")) results = results.filter(r => r.code === '2454');
+            else if (sql.includes("code='2317'")) results = results.filter(r => r.code === '2317');
+            else if (sql.includes("code='2603'")) results = results.filter(r => r.code === '2603');
+            else if (sql.includes("code='0050'")) results = results.filter(r => r.code === '0050');
+            else if (sql.includes("like '005%'")) results = results.filter(r => r.code.startsWith('005'));
+            
+            if (sql.includes("date='2026-04-02'")) results = results.filter(r => r.date === '2026-04-02');
+            if (sql.includes("> 5")) results = results.filter(r => ((r.close - r.open) / r.open * 100) > 5);
+            if (sql.includes("> 10000000")) results = results.filter(r => r.volume > 10000000);
+            
             const limitMatch = sql.match(/limit\s+(\d+)/i);
-            if (limitMatch) {
-                results = results.slice(0, parseInt(limitMatch[1]));
-            }
+            if (limitMatch) results = results.slice(0, parseInt(limitMatch[1]));
             
             if (results.length > 0) {
                 let html = '<table><tr>';
                 Object.keys(results[0]).forEach(k => html += `<th>${k}</th>`);
                 html += '</tr>';
-                results.forEach(r => {
+                results.slice(0, 100).forEach(r => {
                     html += '<tr>';
                     Object.values(r).forEach(v => html += `<td>${typeof v === 'number' ? v.toFixed(2) : v}</td>`);
                     html += '</tr>';
                 });
                 html += '</table>';
-                resultDiv.innerHTML = `<h4>找到 ${results.length} 筆資料</h4>` + html;
+                resultDiv.innerHTML = `<h4>找到 ${results.length} 筆資料 (顯示前100筆)</h4>` + html;
             } else {
                 resultDiv.innerHTML = '<div>沒有找到資料</div>';
             }
         }
     </script>
 </body>
+</html>
