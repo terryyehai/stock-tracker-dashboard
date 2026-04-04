@@ -32,7 +32,7 @@ def init_db():
     """初始化資料庫"""
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    
+
     # 建立股票基本資料表
     c.execute('''CREATE TABLE IF NOT EXISTS stocks (
         code TEXT PRIMARY KEY,
@@ -40,7 +40,7 @@ def init_db():
         category TEXT,
         created_at TEXT
     )''')
-    
+
     # 建立每日股價資料表
     c.execute('''CREATE TABLE IF NOT EXISTS daily_prices (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -54,7 +54,7 @@ def init_db():
         volume INTEGER,
         UNIQUE(code, date)
     )''')
-    
+
     # 建立歷史記錄追蹤表
     c.execute('''CREATE TABLE IF NOT EXISTS price_history (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -66,14 +66,14 @@ def init_db():
         change_20d REAL,
         UNIQUE(code, date)
     )''')
-    
+
     # 初始化股票資料
     today = datetime.now().strftime("%Y-%m-%d")
     for stock in STOCKS_TO_TRACK:
-        c.execute('''INSERT OR IGNORE INTO stocks (code, name, category, created_at) 
-                     VALUES (?, ?, ?, ?)''', 
+        c.execute('''INSERT OR IGNORE INTO stocks (code, name, category, created_at)
+                     VALUES (?, ?, ?, ?)''',
                   (stock["code"], stock["name"], stock["category"], today))
-    
+
     conn.commit()
     conn.close()
     print(f"資料庫初始化完成: {DB_PATH}")
@@ -84,10 +84,10 @@ def fetch_twse_price(code):
         # 嘗試從TWSE取得最新報價
         url = f"https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date={datetime.now().strftime('%Y%m%d')}&stockNo={code}&response=json"
         headers = {"User-Agent": "Mozilla/5.0"}
-        
+
         resp = requests.get(url, headers=headers, timeout=10)
         data = resp.json()
-        
+
         if data.get("stat") == "OK" and data.get("data"):
             for row in data["data"]:
                 if row[0] == code:
@@ -104,7 +104,7 @@ def fetch_twse_price(code):
         return None
 
 def fetch_wantgoo_price(code):
-    """從.wantgoo.com取得股價（備用）"""
+    """從.wantgoo.com取得股價(備用)"""
     try:
         url = f"https://www.wantgoo.com/stock/quote/{code}"
         # 簡化處理
@@ -117,73 +117,79 @@ def collect_daily_data():
     today = datetime.now().strftime("%Y-%m-%d")
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    
+
     print(f"\n📊 開始收集 {today} 股價數據...")
-    
+
     for stock in STOCKS_TO_TRACK:
         code = stock["code"]
         print(f"  取得 {code} {stock['name']}...", end=" ")
-        
+
         data = fetch_twse_price(code)
-        
+
         if data and data.get("price"):
-            # 計算變動百分比（從資料庫取昨日資料計算）
+            # 計算變動百分比(從資料庫取昨日資料計算)
             c.execute("SELECT price FROM daily_prices WHERE code = ? ORDER BY date DESC LIMIT 1", (code,))
             prev = c.fetchone()
             change = 0
             if prev and prev[0]:
                 change = ((data["price"] - prev[0]) / prev[0]) * 100
-            
+
             # 寫入資料庫
-            c.execute('''INSERT OR REPLACE INTO daily_prices 
-                         (code, date, price, yield, pe, pb, change_percent, volume)
-                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)''', 
-                      (code, today, data["price"], data["yield"], data["pe"], data["pb"], change, 0))
-            
-            # 更新歷史記錄（計算多日變化）
+            c.execute('''INSERT OR REPLACE INTO daily_prices
+                         (code, date, close_price, volume)
+                         VALUES (?, ?, ?, ?)''',
+                      (code, today, data["price"], 0))
+
+            # 更新歷史記錄(計算多日變化)
             c.execute("SELECT price FROM daily_prices WHERE code = ? AND date < ? ORDER BY date DESC LIMIT 20", (code, today))
             prices = [row[0] for row in c.fetchall() if row[0]]
-            
+
             change_1d = prices[0] - prices[0] if len(prices) > 0 else 0
             change_5d = ((prices[0] - prices[4]) / prices[4] * 100) if len(prices) > 4 else 0
             change_20d = ((prices[0] - prices[19]) / prices[19] * 100) if len(prices) > 19 else 0
-            
+
             c.execute('''INSERT OR REPLACE INTO price_history
                          (code, date, price, change_1d, change_5d, change_20d)
                          VALUES (?, ?, ?, ?, ?, ?)''',
-                      (code, today, data["price"], 
+                      (code, today, data["price"],
                        ((data["price"] - prices[0]) / prices[0] * 100) if len(prices) > 0 else 0,
                        change_5d, change_20d))
-            
+
             print(f"${data['price']} ✓")
         else:
             print("無法取得數據")
-    
+
     conn.commit()
     conn.close()
-    print("\n✅ 每日數據收集完成！")
+    print("\n✅ 每日數據收集完成!")
 
 def generate_html_dashboard():
     """產生互動式 HTML 儀表板"""
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    
+
     # 取得最新數據
+    # 先取得每檔股票的最新日期
     c.execute('''
-        SELECT s.code, s.name, s.category, d.price, d.yield, d.pe, d.pb, d.change_percent,
-               h.change_1d, h.change_5d, h.change_20d
-        FROM stocks s
-        LEFT JOIN daily_prices d ON s.code = d.code
-        LEFT JOIN (
-            SELECT code, MAX(date) as max_date FROM daily_prices GROUP BY code
-        ) latest ON s.code = latest.code AND d.date = latest.max_date
-        LEFT JOIN price_history h ON s.code = h.code AND d.date = h.date
-        ORDER BY s.category, s.name
+        SELECT code, MAX(date) as max_date FROM daily_prices GROUP BY code
     ''')
+    latest_dates = {row[0]: row[1] for row in c.fetchall()}
     
-    stocks_data = c.fetchall()
+    stocks_data = []
+    for code, name, category in c.execute("SELECT code, name, category FROM stocks ORDER BY category, name"):
+        if code in latest_dates:
+            d = c.execute("SELECT close_price, volume FROM daily_prices WHERE code = ? AND date = ?", 
+                         (code, latest_dates[code])).fetchone()
+            h = c.execute("SELECT change_1d, change_5d, change_20d FROM price_history WHERE code = ? AND date = ?", 
+                         (code, latest_dates[code])).fetchone()
+            stocks_data.append((code, name, category, d[0] if d else None, d[1] if d else None, 
+                               None, None, None,
+                               h[0] if h else None, h[1] if h else None, h[2] if h else None))
+        else:
+            stocks_data.append((code, name, category, None, None, None, None, None, None, None, None))
+
     conn.close()
-    
+
     # 產生 HTML
     html = '''<!DOCTYPE html>
 <html lang="zh-TW">
@@ -239,7 +245,7 @@ def generate_html_dashboard():
         .category-title.growth { border-color: #00d4ff; background: rgba(0,212,255,0.1); }
         .category-title.dividend { border-color: #ff6b6b; background: rgba(255,107,107,0.1); }
         .category-title.value { border-color: #4ecdc4; background: rgba(78,205,196,0.1); }
-        
+
         .stock-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -290,19 +296,19 @@ def generate_html_dashboard():
         }
         .change-1d.positive { background: rgba(74,222,128,0.2); color: #4ade80; }
         .change-1d.negative { background: rgba(248,113,113,0.2); color: #f87171; }
-        
+
         .chart-container {
             background: rgba(255,255,255,0.05);
             border-radius: 20px;
             padding: 20px;
             margin-bottom: 30px;
         }
-        
+
         @media (max-width: 768px) {
             .header h1 { font-size: 1.8rem; }
             .stock-grid { grid-template-columns: 1fr; }
         }
-        
+
         .last-update {
             text-align: center;
             opacity: 0.5;
@@ -316,7 +322,7 @@ def generate_html_dashboard():
         <h1>🎯 台股黑馬追蹤系統</h1>
         <p>每日更新 • 互動式儀表板</p>
     </div>
-    
+
     <div class="stats-row">
         <div class="stat-card">
             <div class="value">''' + str(len([s for s in stocks_data if s[3]])) + '''</div>
@@ -331,20 +337,20 @@ def generate_html_dashboard():
             <div class="label">今日下跌</div>
         </div>
         <div class="stat-card">
-            <div class="value">''' + f"{sum([s[4] or 0 for s in stocks_data if s[4]]):.1f}%" + '''</div>
-            <div class="label">平均殖利率</div>
+            <div class="value">''' + str(len([s for s in stocks_data if s[3]])) + '''</div>
+            <div class="label">有資料</div>
         </div>
     </div>
 '''
-    
+
     # 按類別分組
     categories = {"黑馬": [], "成長": [], "高息": [], "價值": []}
     for s in stocks_data:
         if s[2] in categories:
             categories[s[2]].append(s)
-    
+
     category_colors = {"黑馬": "black-horse", "成長": "growth", "高息": "dividend", "價值": "value"}
-    
+
     for cat, stocks in categories.items():
         if stocks:
             html += f'''
@@ -353,13 +359,9 @@ def generate_html_dashboard():
         <div class="stock-grid">
 '''
             for s in stocks:
-                price = s[3] if s[3] else "-"
-                yield_val = f"{s[4]:.2f}%" if s[4] else "-"
-                pe_val = f"{s[5]:.1f}" if s[5] and s[5] > 0 else "N/A"
-                pb_val = f"{s[6]:.2f}" if s[6] else "-"
-                change_class = "price-up" if s[7] and s[7] > 0 else "price-down" if s[7] and s[7] < 0 else ""
-                change_val = f"{s[7]:+.2f}%" if s[7] else "-"
-                
+                price = f"${s[3]:.2f}" if s[3] else "-"
+                volume = f"{s[4]:,}" if s[4] else "-"
+
                 html += f'''
             <div class="stock-card">
                 <div class="stock-header">
@@ -368,12 +370,9 @@ def generate_html_dashboard():
                         <div class="stock-code">{s[0]}</div>
                     </div>
                 </div>
-                <div class="stock-price {change_class}">${price}</div>
+                <div class="stock-price">{price}</div>
                 <div class="stock-metrics">
-                    <div class="metric"><span class="metric-label">殖利率</span><span>{yield_val}</span></div>
-                    <div class="metric"><span class="metric-label">本益比</span><span>{pe_val}</span></div>
-                    <div class="metric"><span class="metric-label">淨值比</span><span>{pb_val}</span></div>
-                    <div class="metric"><span class="metric-label">今日</span><span class="{change_class}">{change_val}</span></div>
+                    <div class="metric"><span class="metric-label">成交量</span><span>{volume}</span></div>
                 </div>
             </div>
 '''
@@ -381,22 +380,22 @@ def generate_html_dashboard():
         </div>
     </div>
 '''
-    
+
     html += f'''
     <div class="last-update">最後更新: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</div>
 </body>
 </html>'''
-    
+
     output_path = os.path.expanduser("~/.openclaw/workspace/stock-tracker/dashboard.html")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html)
-    
+
     print(f"✅ 儀表板已生成: {output_path}")
     return output_path
 
 if __name__ == "__main__":
     import sys
-    
+
     if len(sys.argv) > 1 and sys.argv[1] == "collect":
         init_db()
         collect_daily_data()
