@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票技術分析報告</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .summary-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .summary-card .count {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #333;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .rating-buy {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .rating-sell {
+            color: #f44336;
+            font-weight: bold;
+        }
+        .rating-hold {
+            color: #ff9800;
+            font-weight: bold;
+        }
+        .signal-buy {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .signal-sell {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .rsi-high {
+            color: #f44336;
+            font-weight: bold;
+        }
+        .rsi-low {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 股票技術分析報告</h1>
+            <div class="timestamp">⏰ 2026-04-25 08:30:15</div>
+        </div>
+        
+        <div class="summary">
+
+            <div class="summary-card" style="background: linear-gradient(135deg, #81C784 0%, #81C784dd 100%);">
+                <h3>偏多</h3>
+                <div class="count">13 檔</div>
+            </div>
+
+            <div class="summary-card" style="background: linear-gradient(135deg, #FFC107 0%, #FFC107dd 100%);">
+                <h3>觀望</h3>
+                <div class="count">87 檔</div>
+            </div>
+
+            <div class="summary-card" style="background: linear-gradient(135deg, #FF8A65 0%, #FF8A65dd 100%);">
+                <h3>偏空</h3>
+                <div class="count">12 檔</div>
+            </div>
+
+            <div class="summary-card" style="background: linear-gradient(135deg, #EF5350 0%, #EF5350dd 100%);">
+                <h3>賣出</h3>
+                <div class="count">4 檔</div>
+            </div>
+
+            <div class="summary-card" style="background: linear-gradient(135deg, #F44336 0%, #F44336dd 100%);">
+                <h3>強力賣出</h3>
+                <div class="count">1 檔</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>🟢 買進信號股票</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>代碼</th>
+                        <th>價格</th>
+                        <th>RSI</th>
+                        <th>MA5/10/20/60</th>
+                        <th>買進信號</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><strong>2382</strong></td>
+                        <td>323.00</td>
+                        <td>67.7</td>
+                        <td>329.80 / 324.10 / 309.12 / 292.82</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2337</strong></td>
+                        <td>132.00</td>
+                        <td>51.4</td>
+                        <td>129.10 / 136.05 / 134.38 / 112.84</td>
+                        <td><span class="signal-buy">突破MA5</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2357</strong></td>
+                        <td>585.00</td>
+                        <td>65.0</td>
+                        <td>599.20 / 592.60 / 578.40 / 546.83</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>9955</strong></td>
+                        <td>31.55</td>
+                        <td>54.4</td>
+                        <td>31.31 / 31.04 / 31.73 / 33.84</td>
+                        <td><span class="signal-buy">突破MA5</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>4572</strong></td>
+                        <td>147.50</td>
+                        <td>66.7</td>
+                        <td>147.40 / 145.85 / 143.93 / 145.46</td>
+                        <td><span class="signal-buy">突破MA5</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6805</strong></td>
+                        <td>1915.00</td>
+                        <td>52.2</td>
+                        <td>1924.00 / 1871.00 / 1867.75 / 1703.08</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2637</strong></td>
+                        <td>72.00</td>
+                        <td>61.2</td>
+                        <td>73.70 / 73.19 / 71.03 / 70.81</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2412</strong></td>
+                        <td>135.50</td>
+                        <td>60.0</td>
+                        <td>136.40 / 136.10 / 135.15 / 134.79</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2338</strong></td>
+                        <td>47.35</td>
+                        <td>59.8</td>
+                        <td>49.59 / 48.00 / 46.46 / 45.04</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6805</strong></td>
+                        <td>1915.00</td>
+                        <td>52.2</td>
+                        <td>1924.00 / 1871.00 / 1867.75 / 1703.08</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2412</strong></td>
+                        <td>135.50</td>
+                        <td>60.0</td>
+                        <td>136.40 / 136.10 / 135.15 / 134.79</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2338</strong></td>
+                        <td>47.35</td>
+                        <td>59.8</td>
+                        <td>49.59 / 48.00 / 46.46 / 45.04</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00905</strong></td>
+                        <td>22.13</td>
+                        <td>69.3</td>
+                        <td>20.80 / 20.09 / 19.88 / 19.30</td>
+                        <td><span class="signal-buy">均線多頭排列</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔴 賣出信號股票</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>代碼</th>
+                        <th>價格</th>
+                        <th>RSI</th>
+                        <th>MA5/10/20/60</th>
+                        <th>賣出信號</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><strong>2317</strong></td>
+                        <td>221.50</td>
+                        <td>82.0</td>
+                        <td>217.20 / 211.40 / 203.97 / 214.18</td>
+                        <td><span class="signal-sell">RSI超買(82.0)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6472</strong></td>
+                        <td>408.50</td>
+                        <td>32.2</td>
+                        <td>412.80 / 417.25 / 426.45 / 484.88</td>
+                        <td><span class="signal-sell">均線空頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>9802</strong></td>
+                        <td>77.80</td>
+                        <td>45.4</td>
+                        <td>77.82 / 77.42 / 79.23 / 89.50</td>
+                        <td><span class="signal-sell">跌破MA5</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>8213</strong></td>
+                        <td>37.90</td>
+                        <td>71.7</td>
+                        <td>38.42 / 36.89 / 35.08 / 35.39</td>
+                        <td><span class="signal-sell">RSI超買(71.7)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>1514</strong></td>
+                        <td>112.50</td>
+                        <td>73.1</td>
+                        <td>112.80 / 111.25 / 107.75 / 117.66</td>
+                        <td><span class="signal-sell">RSI超買(73.1)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6770</strong></td>
+                        <td>52.90</td>
+                        <td>48.8</td>
+                        <td>53.64 / 53.71 / 54.99 / 62.31</td>
+                        <td><span class="signal-sell">均線空頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2881</strong></td>
+                        <td>87.80</td>
+                        <td>50.0</td>
+                        <td>87.86 / 87.70 / 87.71 / 90.17</td>
+                        <td><span class="signal-sell">跌破MA5</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>5608</strong></td>
+                        <td>15.30</td>
+                        <td>31.4</td>
+                        <td>15.69 / 16.00 / 16.17 / 17.05</td>
+                        <td><span class="signal-sell">均線空頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2618</strong></td>
+                        <td>33.75</td>
+                        <td>37.0</td>
+                        <td>34.63 / 34.87 / 34.87 / 36.00</td>
+                        <td><span class="signal-sell">均線空頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2646</strong></td>
+                        <td>20.15</td>
+                        <td>31.1</td>
+                        <td>20.56 / 20.79 / 20.97 / 21.97</td>
+                        <td><span class="signal-sell">均線空頭排列</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>0056</strong></td>
+                        <td>40.72</td>
+                        <td>100.0</td>
+                        <td>nan / nan / nan / nan</td>
+                        <td><span class="signal-sell">RSI超買(100.0)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00878</strong></td>
+                        <td>24.06</td>
+                        <td>75.9</td>
+                        <td>23.34 / 22.72 / 22.58 / 22.72</td>
+                        <td><span class="signal-sell">RSI超買(75.9)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6691</strong></td>
+                        <td>675.00</td>
+                        <td>89.6</td>
+                        <td>675.40 / 659.00 / 620.75 / 615.05</td>
+                        <td><span class="signal-sell">跌破MA5</span> <span class="signal-sell">RSI超買(89.6)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2371</strong></td>
+                        <td>30.30</td>
+                        <td>41.7</td>
+                        <td>31.21 / 31.73 / 31.62 / 34.40</td>
+                        <td><span class="signal-sell">MACD死叉</span> <span class="signal-sell">MACD柱狀圖翻負</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2801</strong></td>
+                        <td>21.05</td>
+                        <td>65.7</td>
+                        <td>21.32 / 21.33 / 21.02 / 20.77</td>
+                        <td><span class="signal-sell">MACD死叉</span> <span class="signal-sell">MACD柱狀圖翻負</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2105</strong></td>
+                        <td>32.10</td>
+                        <td>54.3</td>
+                        <td>32.69 / 32.57 / 31.93 / 30.82</td>
+                        <td><span class="signal-sell">MACD死叉</span> <span class="signal-sell">MACD柱狀圖翻負</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2731</strong></td>
+                        <td>157.50</td>
+                        <td>45.8</td>
+                        <td>159.40 / 160.25 / 160.78 / 167.91</td>
+                        <td><span class="signal-sell">均線空頭排列</span> <span class="signal-sell">MACD死叉</span> <span class="signal-sell">MACD柱狀圖翻負</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ RSI超買警示 (>70)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>代碼</th>
+                        <th>RSI</th>
+                        <th>價格</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><strong>2330</strong></td>
+                        <td class="rsi-high">85.3</td>
+                        <td>2145.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2303</strong></td>
+                        <td class="rsi-high">77.9</td>
+                        <td>74.50</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3711</strong></td>
+                        <td class="rsi-high">86.5</td>
+                        <td>496.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2308</strong></td>
+                        <td class="rsi-high">91.7</td>
+                        <td>2035.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3037</strong></td>
+                        <td class="rsi-high">88.0</td>
+                        <td>790.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3019</strong></td>
+                        <td class="rsi-high">73.2</td>
+                        <td>139.50</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2368</strong></td>
+                        <td class="rsi-high">92.9</td>
+                        <td>1390.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3035</strong></td>
+                        <td class="rsi-high">78.0</td>
+                        <td>185.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>0052</strong></td>
+                        <td class="rsi-high">71.7</td>
+                        <td>50.05</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3711</strong></td>
+                        <td class="rsi-high">86.5</td>
+                        <td>496.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3189</strong></td>
+                        <td class="rsi-high">84.7</td>
+                        <td>526.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6196</strong></td>
+                        <td class="rsi-high">78.4</td>
+                        <td>386.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2923</strong></td>
+                        <td class="rsi-high">70.6</td>
+                        <td>24.30</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2834</strong></td>
+                        <td class="rsi-high">71.4</td>
+                        <td>16.30</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2414</strong></td>
+                        <td class="rsi-high">76.3</td>
+                        <td>46.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00690</strong></td>
+                        <td class="rsi-high">70.1</td>
+                        <td>60.25</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2486</strong></td>
+                        <td class="rsi-high">83.8</td>
+                        <td>224.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3231</strong></td>
+                        <td class="rsi-high">72.0</td>
+                        <td>141.50</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2535</strong></td>
+                        <td class="rsi-high">82.2</td>
+                        <td>76.60</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3645</strong></td>
+                        <td class="rsi-high">73.0</td>
+                        <td>106.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>0050</strong></td>
+                        <td class="rsi-high">85.9</td>
+                        <td>88.40</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00662</strong></td>
+                        <td class="rsi-high">87.2</td>
+                        <td>109.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>3645</strong></td>
+                        <td class="rsi-high">73.0</td>
+                        <td>106.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00850</strong></td>
+                        <td class="rsi-high">76.7</td>
+                        <td>71.10</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00881</strong></td>
+                        <td class="rsi-high">91.2</td>
+                        <td>45.23</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00920</strong></td>
+                        <td class="rsi-high">77.3</td>
+                        <td>23.97</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>2317</strong></td>
+                        <td class="rsi-high">82.0</td>
+                        <td>221.50</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>8213</strong></td>
+                        <td class="rsi-high">71.7</td>
+                        <td>37.90</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>1514</strong></td>
+                        <td class="rsi-high">73.1</td>
+                        <td>112.50</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>0056</strong></td>
+                        <td class="rsi-high">100.0</td>
+                        <td>40.72</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>00878</strong></td>
+                        <td class="rsi-high">75.9</td>
+                        <td>24.06</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6691</strong></td>
+                        <td class="rsi-high">89.6</td>
+                        <td>675.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>💡 RSI超賣機會 (<30)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>代碼</th>
+                        <th>RSI</th>
+                        <th>價格</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td><strong>1314</strong></td>
+                        <td class="rsi-low">28.2</td>
+                        <td>7.44</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>1314</strong></td>
+                        <td class="rsi-low">28.2</td>
+                        <td>7.44</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6807</strong></td>
+                        <td class="rsi-low">27.6</td>
+                        <td>36.90</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>1314</strong></td>
+                        <td class="rsi-low">28.2</td>
+                        <td>7.44</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>6807</strong></td>
+                        <td class="rsi-low">27.6</td>
+                        <td>36.90</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>📊 分析說明</h2>
+            <ul>
+                <li>分析股票數: 117 檔</li>
+                <li>技術指標: MA5/10/20/60, RSI(14), MACD</li>
+                <li>買賣信號基於多個技術指標綜合判斷</li>
+                <li>RSI > 70 為超買，RSI < 30 為超賣</li>
+                <li>均線多頭排列: MA5 > MA10 > MA20 > MA60</li>
+                <li>均線空頭排列: MA5 < MA10 < MA20 < MA60</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
