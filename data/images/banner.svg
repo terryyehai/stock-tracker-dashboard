@@ -1,0 +1,112 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="28" x2="1110" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111F"/>
+      <stop offset="0.45" stop-color="#102A43"/>
+      <stop offset="1" stop-color="#0A6C8F"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="280" y1="58" x2="944" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1C2F" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0B1322" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="264" y1="84" x2="792" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3EE7C4"/>
+      <stop offset="0.55" stop-color="#59B6FF"/>
+      <stop offset="1" stop-color="#B8F36B"/>
+    </linearGradient>
+    <linearGradient id="code" x1="880" y1="72" x2="1096" y2="252" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2B48"/>
+      <stop offset="1" stop-color="#10213A"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="white" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="blur" x="-40" y="-40" width="1280" height="480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+    <filter id="shadow" x="212" y="36" width="792" height="328" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0196 0 0 0 0 0.0706 0 0 0 0 0.149 0 0 0 0.32 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="400" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="400" rx="28" fill="url(#grid)"/>
+
+  <g filter="url(#blur)">
+    <circle cx="192" cy="80" r="112" fill="#38D6FF" fill-opacity="0.18"/>
+    <circle cx="1000" cy="346" r="132" fill="#8DFF6A" fill-opacity="0.16"/>
+    <circle cx="854" cy="72" r="96" fill="#4DF3C5" fill-opacity="0.14"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M42 320C196 252 366 242 520 286" stroke="#6BE7FF" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M666 80C802 22 956 34 1140 124" stroke="#7CFFB1" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M28 120C168 150 246 132 334 86" stroke="#9EF3FF" stroke-opacity="0.18" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="236" y="54" width="732" height="292" rx="26" fill="url(#panel)" stroke="white" stroke-opacity="0.1"/>
+  </g>
+
+  <rect x="268" y="82" width="166" height="30" rx="15" fill="#122741" stroke="#64DDFD" stroke-opacity="0.35"/>
+  <text x="286" y="102" fill="#A9EFFF" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" letter-spacing="1.4">PROMPT AS CODE</text>
+
+  <text x="268" y="154" fill="white" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="46" font-weight="800">GPT-Image2</text>
+  <text x="268" y="203" fill="url(#accent)" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="34" font-weight="750">工业级提示词引擎与模板库</text>
+  <text x="268" y="240" fill="#C4D6EA" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="500">
+    将零散灵感重构为可调用协议，把图像生成从“抽卡”推进到“系统工程”。
+  </text>
+
+  <g>
+    <rect x="268" y="272" width="160" height="42" rx="14" fill="#0F2139" stroke="#52D6F5" stroke-opacity="0.45"/>
+    <circle cx="290" cy="293" r="6" fill="#44E6C8"/>
+    <text x="306" y="298" fill="#E8F7FF" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="700">329 个重构案例</text>
+  </g>
+  <g>
+    <rect x="442" y="272" width="162" height="42" rx="14" fill="#0F2139" stroke="#7BEA83" stroke-opacity="0.4"/>
+    <rect x="462" y="286" width="12" height="12" rx="3" fill="#97F27E"/>
+    <text x="484" y="298" fill="#E8F7FF" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="700">Schema 驱动</text>
+  </g>
+  <g>
+    <rect x="618" y="272" width="170" height="42" rx="14" fill="#0F2139" stroke="#8AB8FF" stroke-opacity="0.4"/>
+    <path d="M639 298H654" stroke="#84B8FF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M647 290V306" stroke="#84B8FF" stroke-width="3" stroke-linecap="round"/>
+    <text x="666" y="298" fill="#E8F7FF" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="700">自动化工作流</text>
+  </g>
+
+  <g>
+    <rect x="846" y="82" width="92" height="28" rx="14" fill="#142845"/>
+    <text x="865" y="100" fill="#8EEBFF" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="13" font-weight="700">JSON / YAML</text>
+  </g>
+
+  <g>
+    <rect x="818" y="124" width="114" height="150" rx="18" fill="#0E1E33" stroke="#4EE2C3" stroke-opacity="0.24"/>
+    <text x="838" y="149" fill="#6DF0D3" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="15" font-weight="700">{</text>
+    <text x="842" y="173" fill="#D7E7F9" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="12">"subject":</text>
+    <text x="842" y="194" fill="#8DB9FF" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="12">"lighting":</text>
+    <text x="842" y="215" fill="#8DF4D6" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="12">"layout":</text>
+    <text x="842" y="236" fill="#F1C27A" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="12">"material":</text>
+    <text x="838" y="261" fill="#6DF0D3" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="15" font-weight="700">}</text>
+  </g>
+
+  <g>
+    <rect x="948" y="124" width="164" height="150" rx="18" fill="url(#code)" stroke="#94BCFF" stroke-opacity="0.22"/>
+    <rect x="968" y="146" width="124" height="18" rx="9" fill="#152A47"/>
+    <circle cx="980" cy="155" r="3" fill="#46E2C7"/>
+    <rect x="990" y="152" width="38" height="6" rx="3" fill="#59B7FF"/>
+    <rect x="968" y="178" width="84" height="10" rx="5" fill="#1B3558"/>
+    <rect x="968" y="198" width="122" height="10" rx="5" fill="#1B3558"/>
+    <rect x="968" y="218" width="104" height="10" rx="5" fill="#1B3558"/>
+    <rect x="968" y="238" width="136" height="10" rx="5" fill="#1B3558"/>
+    <text x="968" y="295" fill="#D4E6F7" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="650">结构化视觉组件</text>
+    <text x="968" y="316" fill="#88A9C9" font-family="'SF Pro Text','PingFang SC','Microsoft YaHei',sans-serif" font-size="12">Composable • Stable • Readable</text>
+  </g>
+
+  <g opacity="0.55">
+    <rect x="818" y="296" width="294" height="18" rx="9" fill="#10233D"/>
+    <rect x="818" y="296" width="182" height="18" rx="9" fill="url(#accent)"/>
+    <text x="822" y="343" fill="#90A9C6" font-family="'IBM Plex Mono','SFMono-Regular',monospace" font-size="12">prompt_engine.confidence = 0.98</text>
+  </g>
+</svg>
