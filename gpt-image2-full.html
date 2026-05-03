@@ -30026,9 +30026,35 @@ The final result must look like the SAME original image enhanced with mini alter
 function showCat(el, cat) {
   document.querySelectorAll(".stat-chip").forEach(e => e.classList.remove("active"));
   el.classList.add("active");
-  document.querySelectorAll(".cat-section").forEach(el => {
-    el.style.display = (cat === "all" || el.getAttribute("data-category") === cat) ? "block" : "none";
-  });
+
+  if (cat === "all") {
+    // Show all sections and cards
+    document.querySelectorAll(".cat-section").forEach(sec => sec.style.display = "block");
+    document.querySelectorAll(".case-card").forEach(card => card.style.display = "block");
+  } else if (cat === "GitHub" || cat === "UniForme") {
+    // Source-based filter: show only cards with matching badge
+    const badgeClass = cat === "GitHub" ? "badge-gh" : "badge-uni";
+    document.querySelectorAll(".cat-section").forEach(sec => {
+      // Count visible cards in this section
+      const cards = Array.from(sec.querySelectorAll(".case-card"));
+      const visibleCards = cards.filter(card => card.querySelector("." + badgeClass));
+      // Show section only if it has matching cards
+      sec.style.display = visibleCards.length > 0 ? "block" : "none";
+      // Hide/show individual cards
+      cards.forEach(card => {
+        card.style.display = card.querySelector("." + badgeClass) ? "block" : "none";
+      });
+    });
+  } else {
+    // Category filter: show only cards with matching data-cat, hide the rest
+    document.querySelectorAll(".cat-section").forEach(sec => {
+      const isMatch = sec.getAttribute("data-category") === cat;
+      sec.style.display = isMatch ? "block" : "none";
+    });
+    document.querySelectorAll(".case-card").forEach(card => {
+      card.style.display = card.getAttribute("data-cat") === cat ? "block" : "none";
+    });
+  }
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function filterAll() {
@@ -30038,7 +30064,9 @@ function filterAll() {
     const title = card.getAttribute("data-title") || "";
     const cat = card.getAttribute("data-cat") || "";
     const prompt = card.querySelector(".prompt-text") ? card.querySelector(".prompt-text").textContent : "";
-    const match = !q || title.includes(q) || cat.includes(q) || prompt.toLowerCase().includes(q);
+    const source = card.querySelector(".case-source") ? card.querySelector(".case-source").textContent : "";
+    const num = card.querySelector(".case-num") ? card.querySelector(".case-num").textContent : "";
+    const match = !q || title.includes(q) || cat.includes(q) || prompt.toLowerCase().includes(q) || source.toLowerCase().includes(q) || num.toLowerCase().includes(q);
     card.style.display = match ? "block" : "none";
     if (match) visible++;
   });
