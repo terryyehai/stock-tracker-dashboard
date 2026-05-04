@@ -94,6 +94,9 @@
         .scroll-container {
             overflow-x: auto;
         }
+        /* Lazy rendering for Safari performance */
+        .category { opacity: 0; transition: opacity 0.3s; }
+        .category.loaded { opacity: 1; }
     </style>
 </head>
 <body>
@@ -2278,5 +2281,19 @@
             <p>數據來源: stocks.db (台股日價格數據) + 口袋證券 ETF API</p>
         </div>
     </div>
+<script>
+(function() {
+  const cats = document.querySelectorAll('.category');
+  let idx = 0;
+  function loadNext() {
+    if (idx < cats.length) {
+      cats[idx].classList.add('loaded');
+      idx++;
+      requestAnimationFrame(loadNext);
+    }
+  }
+  loadNext();
+})();
+</script>
 </body>
 </html>
