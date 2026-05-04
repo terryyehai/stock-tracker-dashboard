@@ -3,2215 +3,810 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台股分析報告 2026-05-02｜散戶必看</title>
+<title>台股全面分析報告 2026-05-04｜全市場散戶必看</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft JhengHei", sans-serif; background: #f0f2f5; color: #333; }
-.container { max-width: 900px; margin: 0 auto; padding: 16px; }
-.hero { background: linear-gradient(135deg, #1a472a 0%, #2e7d32 100%); color: white; border-radius: 16px; padding: 24px 20px; margin-bottom: 20px; text-align: center; }
-.hero h1 { font-size: 1.5rem; margin-bottom: 8px; }
-.hero .date { opacity: 0.8; font-size: 0.9rem; }
-.summary-bar { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
-.summary-chip { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
-.chip-buy { background: #4CAF50; color: white; }
-.chip-watch { background: #FF9800; color: white; }
-.chip-sell { background: #F44336; color: white; }
-.chip-neutral { background: #9e9e9e; color: white; }
-.section { margin-bottom: 32px; }
-.section-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #ddd; display: flex; align-items: center; gap: 8px; }
-.tip-box { background: #e3f2fd; border: 1px solid #90caf9; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; font-size: 0.88rem; line-height: 1.6; }
-.disclaimer { background: #fff3e0; border-radius: 10px; padding: 12px 16px; font-size: 0.8rem; color: #e65100; margin-top: 24px; }
-.toggle-btn { background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin-bottom: 12px; }
-.toggle-btn.secondary { background: #9e9e9e; }
-.hidden { display: none; }
-.footer { text-align: center; padding: 20px; color: #888; font-size: 0.8rem; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-  @media (max-width: 600px) {
-  .hero h1 { font-size: 1.2rem; }
-  .stock-card { opacity: 0; animation: fadeIn 0.4s ease forwards; } padding: 12px !important; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Microsoft JhengHei",sans-serif;background:#f0f2f5;color:#333;}
+.container{max-width:960px;margin:0 auto;padding:16px}
+.hero{background:linear-gradient(135deg,#1a472a 0%,#2e7d32 100%);color:white;border-radius:16px;padding:24px 20px;margin-bottom:20px;text-align:center}
+.hero h1{font-size:1.5rem;margin-bottom:8px}
+.hero .date{opacity:0.8;font-size:0.9rem}
+.summary-bar{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0}
+.summary-chip{padding:8px 16px;border-radius:20px;font-size:0.85rem;font-weight:bold}
+.chip-buy{background:#4CAF50;color:white}
+.chip-watch{background:#FF9800;color:white}
+.chip-sell{background:#F44336;color:white}
+.chip-neutral{background:#9e9e9e;color:white}
+.section{margin-bottom:32px}
+.section-title{font-size:1.1rem;font-weight:bold;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #ddd;display:flex;align-items:center;gap:8px}
+.tip-box{background:#e3f2fd;border:1px solid #90caf9;border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;line-height:1.6}
+.disclaimer{background:#fff3e0;border-radius:10px;padding:12px 16px;font-size:0.8rem;color:#e65100;margin-top:24px}
+.toggle-btn{background:#4CAF50;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:0.9rem;margin-bottom:12px}
+.toggle-btn.secondary{background:#9e9e9e}
+.hidden{display:none}
+.footer{text-align:center;padding:20px;color:#888;font-size:0.8rem}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){
+  .hero h1{font-size:1.2rem}
+  .stock-card{padding:12px!important}
+  .stock-card{opacity:0;animation:fadeIn 0.4s ease forwards}
 }
 </style>
 </head>
 <body>
 <div class="container">
-
 <div class="hero">
-  <h1>📊 台股分析報告</h1>
-  <p class="date">📅 2026-05-02 · 共分析 129 檔股票</p>
+  <h1>📊 台股全面分析報告（全市場）</h1>
+  <p class="date">📅 2026-05-04 · 共分析 55 檔上市/上櫃股票</p>
   <div class="summary-bar">
-    <span class="summary-chip chip-buy">✅ 建議買進 68 檔</span>
-    <span class="summary-chip chip-watch">👀 可以觀察 33 檔</span>
-    <span class="summary-chip chip-sell">⚠️ 建議賣出 24 檔</span>
-    <span class="summary-chip chip-neutral">➖ 中立 4 檔</span>
+    <span class="summary-chip chip-buy">✅ 建議買進 34 檔</span>
+    <span class="summary-chip chip-watch">👀 可以觀察 7 檔</span>
+    <span class="summary-chip chip-sell">⚠️ 建議賣出 8 檔</span>
+    <span class="summary-chip chip-neutral">➖ 中立 6 檔</span>
   </div>
 </div>
 
 <div class="tip-box">
-  💡 <b>這份報告告訴你：</b>根據技術指標（MACD、均線、RSI）評估每檔股票的買賣訊號。風險等級只看「價格波動幅度」，不包含基本面風險。投資前請自行判斷。
+  💡 <b>如何讀這份報告：</b>根據技術指標（均線、MACD、RSI、布林通道）評估每檔股票的買賣訊號。分數越高 → 買進訊號越強。風險等級只看「與60日均線偏離程度」，不包含基本面風險。
 </div>
 
 <div class="section">
-  <div class="section-title">🟢 建議買進（共 68 檔）</div>
-  <button class="toggle-btn" onclick="document.getElementById('buy-list').classList.toggle('hidden'); this.textContent=document.getElementById('buy-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
-  <div id="buy-list">
-    <div style="display:grid; gap:10px;">
-    <div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">國泰永續</span>
-      <span style="color:#666; margin-left:8px;">00878</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$24.06</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 68.88</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ 突破布林上軌</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">車王電</span>
-      <span style="color:#666; margin-left:8px;">1533</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$32.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 69.05</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">國泰</span>
-      <span style="color:#666; margin-left:8px;">2882</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$77.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 69.57</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦</span>
-      <span style="color:#666; margin-left:8px;">2881</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$90.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 60.19</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">凱基優選高股息30</span>
-      <span style="color:#666; margin-left:8px;">00915</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$24.82</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 68.67</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">復華台灣</span>
-      <span style="color:#666; margin-left:8px;">00929</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$22.24</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 77.55</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">統一台灣高息動能</span>
-      <span style="color:#666; margin-left:8px;">00939</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$16.84</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 73.03</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">群益科技高息成長</span>
-      <span style="color:#666; margin-left:8px;">00946</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$11.66</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 74.45</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">復華日本</span>
-      <span style="color:#666; margin-left:8px;">006207</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$32.85</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 72.49</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">空中衛星</span>
-      <span style="color:#666; margin-left:8px;">00921</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$20.36</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 79.55</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">FT潔淨能源</span>
-      <span style="color:#666; margin-left:8px;">00899</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$25.62</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">強力買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 77.34</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台積電</span>
-      <span style="color:#666; margin-left:8px;">2330</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$2135.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 65.79</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台泥</span>
-      <span style="color:#666; margin-left:8px;">1101</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$24.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 61.11</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">旺宏</span>
-      <span style="color:#666; margin-left:8px;">2337</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$154.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 59.26</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">神基</span>
-      <span style="color:#666; margin-left:8px;">3005</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$97.60</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 46.36</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">億豐</span>
-      <span style="color:#666; margin-left:8px;">8464</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$351.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 58.54</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">洋基工程</span>
-      <span style="color:#666; margin-left:8px;">6691</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$631.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 69.66</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">鈺齊-KY</span>
-      <span style="color:#666; margin-left:8px;">9802</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$77.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 52.07</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">宏達電</span>
-      <span style="color:#666; margin-left:8px;">2498</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$40.15</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 54.24</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">駐龍</span>
-      <span style="color:#666; margin-left:8px;">4572</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$144.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 55.88</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中興電</span>
-      <span style="color:#666; margin-left:8px;">1513</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$148.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 61.54</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華榮</span>
-      <span style="color:#666; margin-left:8px;">1608</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$32.70</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 60.42</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台汽電</span>
-      <span style="color:#666; margin-left:8px;">8926</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$44.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 59.85</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">彰銀</span>
-      <span style="color:#666; margin-left:8px;">2801</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$21.15</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 64.44</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">臺企銀</span>
-      <span style="color:#666; margin-left:8px;">2834</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$16.35</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 68.33</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">緯創</span>
-      <span style="color:#666; margin-left:8px;">3231</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$137.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 66.67</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">達欣工</span>
-      <span style="color:#666; margin-left:8px;">2535</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$72.10</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 53.18</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">安集</span>
-      <span style="color:#666; margin-left:8px;">6477</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$33.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 54.61</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">元大高股息</span>
-      <span style="color:#666; margin-left:8px;">0056</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$40.90</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 64.87</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">元大臺灣ESG永續</span>
-      <span style="color:#666; margin-left:8px;">00850</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$76.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 89.37</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">永豐ESG低碳高息</span>
-      <span style="color:#666; margin-left:8px;">00930</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$19.36</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 81.22</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦特選高股息30</span>
-      <span style="color:#666; margin-left:8px;">00900</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$15.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 80.99</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">復華富時高息低波</span>
-      <span style="color:#666; margin-left:8px;">00731</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$72.55</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 64.44</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦NASDAQ</span>
-      <span style="color:#666; margin-left:8px;">00662</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$110.45</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 93.94</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦越南</span>
-      <span style="color:#666; margin-left:8px;">00885</span>
-    </div>
+  <div class="section-title">🟢 建議買進（共 34 檔，按強度排序）</div>
+  <button class="toggle-btn" onclick="document.getElementById('buy-list').classList.toggle('hidden');this.textContent=document.getElementById('buy-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
+  <div id="buy-list"><div style="display:grid;gap:10px;"><div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">富邦越南</span><span style="color:#666;margin-left:8px;">00885</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$18.77</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$19</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 68.63</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">強力買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 68.5</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 4091K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">元大S&P500</span>
-      <span style="color:#666; margin-left:8px;">00646</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">復華日本</span><span style="color:#666;margin-left:8px;">006207</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$70.95</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$33</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 88.81</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">強力買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 81.6</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 106K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中信中國</span>
-      <span style="color:#666; margin-left:8px;">00752</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">期元大S&P石油</span><span style="color:#666;margin-left:8px;">00646</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$23.73</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$72</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 46.97</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">強力買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 94.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 3396K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台達電</span>
-      <span style="color:#666; margin-left:8px;">2308</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">0051</span><span style="color:#666;margin-left:8px;">0051</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$2165.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$129</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 87.14</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 88.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 95K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">美律</span>
-      <span style="color:#666; margin-left:8px;">2439</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">群益深証</span><span style="color:#666;margin-left:8px;">00643</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$86.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$20</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 54.95</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 87.3</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 2730K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">智原</span>
-      <span style="color:#666; margin-left:8px;">3035</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">富邦NASDAQ</span><span style="color:#666;margin-left:8px;">00662</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$168.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$113</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 65.43</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 96.0</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 4839K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">達明</span>
-      <span style="color:#666; margin-left:8px;">4585</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">台新全球</span><span style="color:#666;margin-left:8px;">00851</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$312.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$62</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 62.36</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 77.6</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 24K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">景碩</span>
-      <span style="color:#666; margin-left:8px;">3189</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">國泰永續</span><span style="color:#666;margin-left:8px;">00878</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$528.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$26</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 84.41</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 89.1</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 93947K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">南亞科</span>
-      <span style="color:#666; margin-left:8px;">2408</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">潔淨能</span><span style="color:#666;margin-left:8px;">00899</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$215.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$26</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 55.40</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 74.5</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 149K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li><li>✅ 突破布林通道上軌，股價強勢</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">志超</span>
-      <span style="color:#666; margin-left:8px;">8213</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">富邦特選高股息30</span><span style="color:#666;margin-left:8px;">00900</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$36.25</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$16</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 64.11</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 83.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 25550K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">所羅門</span>
-      <span style="color:#666; margin-left:8px;">2359</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">空衛星</span><span style="color:#666;margin-left:8px;">00921</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$119.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$21</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 65.33</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 79.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 550K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">帆宣</span>
-      <span style="color:#666; margin-left:8px;">6196</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">國泰台灣</span><span style="color:#666;margin-left:8px;">00922</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$378.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$35</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 80.00</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 87.0</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 28798K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">全訊</span>
-      <span style="color:#666; margin-left:8px;">5222</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">復華台灣</span><span style="color:#666;margin-left:8px;">00929</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$131.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$23</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 57.76</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 79.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 81492K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">亞力</span>
-      <span style="color:#666; margin-left:8px;">1514</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">永豐ESG低碳高息</span><span style="color:#666;margin-left:8px;">00930</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$110.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$20</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 66.10</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 86.1</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 3913K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">漢翔</span>
-      <span style="color:#666; margin-left:8px;">2634</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">中信成長高股息</span><span style="color:#666;margin-left:8px;">00934</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$46.95</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$24</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 51.09</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 5901K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">至鼎-KY</span>
-      <span style="color:#666; margin-left:8px;">1592</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">統一台灣高息動能</span><span style="color:#666;margin-left:8px;">00939</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$33.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$17</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 98.02</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.3</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 23902K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ 突破布林上軌</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">士電</span>
-      <span style="color:#666; margin-left:8px;">1503</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">群益科技高息成長</span><span style="color:#666;margin-left:8px;">00946</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$189.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$12</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 61.80</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 5523K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">合機</span>
-      <span style="color:#666; margin-left:8px;">1618</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">電力基建</span><span style="color:#666;margin-left:8px;">009805</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$38.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$17</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 50.48</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 16463K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li><li>✅ 突破布林通道上軌，股價強勢</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">東元</span>
-      <span style="color:#666; margin-left:8px;">1504</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2071</span><span style="color:#666;margin-left:8px;">2071</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$62.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$21</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 55.63</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 32.0</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 236K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ RSI偏低，低於40</li><li>✅ 跌破布林通道下軌，可能超跌</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">康舒</span>
-      <span style="color:#666; margin-left:8px;">6282</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">元大台灣</span><span style="color:#666;margin-left:8px;">0050</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$47.35</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$95</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 58.79</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 83.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 124879K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">一詮</span>
-      <span style="color:#666; margin-left:8px;">2486</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">科技龍頭</span><span style="color:#666;margin-left:8px;">0052</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$270.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$55</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 96.20</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 51251K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中工</span>
-      <span style="color:#666; margin-left:8px;">2515</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">0053</span><span style="color:#666;margin-left:8px;">0053</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$13.05</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$218</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 48.21</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 84.1</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 37K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華城</span>
-      <span style="color:#666; margin-left:8px;">1519</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">0057</span><span style="color:#666;margin-left:8px;">0057</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$888.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$281</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 66.19</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 85.4</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 29K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">大亞</span>
-      <span style="color:#666; margin-left:8px;">1609</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">006203</span><span style="color:#666;margin-left:8px;">006203</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$32.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$173</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 48.92</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 83.3</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 20K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">優質高息</span>
-      <span style="color:#666; margin-left:8px;">00881</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">006208</span><span style="color:#666;margin-left:8px;">006208</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$46.79</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$219</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 93.57</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 83.9</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 7094K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">國泰股利精選30</span>
-      <span style="color:#666; margin-left:8px;">00701</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">00690</span><span style="color:#666;margin-left:8px;">00690</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$30.09</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$71</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 71.94</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 92.1</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 633K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中信成長高股息</span>
-      <span style="color:#666; margin-left:8px;">00934</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">野村趨勢</span><span style="color:#666;margin-left:8px;">00728</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$23.41</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$56</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 74.70</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 87.0</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 239K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">大華優利高填息30</span>
-      <span style="color:#666; margin-left:8px;">00918</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">元大美全</span><span style="color:#666;margin-left:8px;">00762</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$23.34</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$104</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 75.34</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 100</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 354K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">動能高息</span>
-      <span style="color:#666; margin-left:8px;">00892</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">元大臺灣ESG永續</span><span style="color:#666;margin-left:8px;">00850</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$38.19</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$79</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 86.73</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 92.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 1714K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">群益半導體收益</span>
-      <span style="color:#666; margin-left:8px;">00927</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">優質高息</span><span style="color:#666;margin-left:8px;">00881</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$29.83</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$49</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 80.50</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 92.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 19412K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">元大全球</span>
-      <span style="color:#666; margin-left:8px;">00762</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">動能高息</span><span style="color:#666;margin-left:8px;">00892</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$99.90</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$40</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 96.74</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 89.9</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 3685K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台新全球</span>
-      <span style="color:#666; margin-left:8px;">00851</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">群益半導體收益</span><span style="color:#666;margin-left:8px;">00927</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$60.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$32</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 77.88</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 77.3</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 24765K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦科技</span>
-      <span style="color:#666; margin-left:8px;">0052</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">光洋科</span><span style="color:#666;margin-left:8px;">1785</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$52.65</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$170</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 79.37</span>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 74.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 48620K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #4CAF50; background:#f0fdf4; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">國泰AI機器人</span>
-      <span style="color:#666; margin-left:8px;">00737</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #4CAF50;background:#f0fdf4;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2070</span><span style="color:#666;margin-left:8px;">2070</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$34.85</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$63</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#4CAF50; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議買進</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 70.03</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
-</div>
-    </div>
+    <span style="display:inline-block;background:#4CAF50;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議買進</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 90.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 2792K</span>
   </div>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+</div></div></div>
 </div>
 
 <div class="section">
-  <div class="section-title">👀 可以觀察（共 33 檔）</div>
-  <button class="toggle-btn secondary" onclick="document.getElementById('watch-list').classList.toggle('hidden'); this.textContent=document.getElementById('watch-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
-  <div id="watch-list" class="hidden">
-    <div style="display:grid; gap:10px;">
-    <div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">鴻海</span>
-      <span style="color:#666; margin-left:8px;">2317</span>
-    </div>
+  <div class="section-title">👀 可以觀察（共 7 檔）</div>
+  <button class="toggle-btn secondary" onclick="document.getElementById('watch-list').classList.toggle('hidden');this.textContent=document.getElementById('watch-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
+  <div id="watch-list" class="hidden"><div style="display:grid;gap:10px;"><div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">0055</span><span style="color:#666;margin-left:8px;">0055</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$219.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$33</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 70.53</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 56.1</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 321K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">聯電</span>
-      <span style="color:#666; margin-left:8px;">2303</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">富邦日本</span><span style="color:#666;margin-left:8px;">00645</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$77.30</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$52</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 72.14</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 49.4</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 228K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">台塑化</span>
-      <span style="color:#666; margin-left:8px;">6505</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">國泰股利精選30</span><span style="color:#666;margin-left:8px;">00701</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$56.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$30</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 54.75</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 70.0</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 762K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">欣興</span>
-      <span style="color:#666; margin-left:8px;">3037</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">00713</span><span style="color:#666;margin-left:8px;">00713</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$883.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$53</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 91.74</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 57.5</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 16879K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線多頭排列，趨勢向上</li><li>✅ RSI極度過買，回檔風險高</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">群聯</span>
-      <span style="color:#666; margin-left:8px;">8299</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">復華富時高息低波</span><span style="color:#666;margin-left:8px;">00731</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$1900.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$73</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 60.4</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 602K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">亞光</span>
-      <span style="color:#666; margin-left:8px;">3019</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">中信中國</span><span style="color:#666;margin-left:8px;">00752</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$138.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$24</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 71.95</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 52.4</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 1776K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI過買，可能過熱</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">萬達光電</span>
-      <span style="color:#666; margin-left:8px;">5220</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #FF9800;background:#fff8e1;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2064</span><span style="color:#666;margin-left:8px;">2064</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$20.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$12</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
+    <span style="display:inline-block;background:#FF9800;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">可以觀察</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 54.2</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 55K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">漢磊</span>
-      <span style="color:#666; margin-left:8px;">3707</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$66.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">廣明</span>
-      <span style="color:#666; margin-left:8px;">6188</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$83.40</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">保瑞</span>
-      <span style="color:#666; margin-left:8px;">6472</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$408.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 31.36</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">是方</span>
-      <span style="color:#666; margin-left:8px;">6561</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$340.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">振曜</span>
-      <span style="color:#666; margin-left:8px;">6143</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$87.10</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">兆捷科技</span>
-      <span style="color:#666; margin-left:8px;">6959</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$145.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">家登</span>
-      <span style="color:#666; margin-left:8px;">3680</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$537.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">永信建</span>
-      <span style="color:#666; margin-left:8px;">5508</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$48.05</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">明遠精密</span>
-      <span style="color:#666; margin-left:8px;">7704</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$65.10</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">光洋科</span>
-      <span style="color:#666; margin-left:8px;">1785</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$165.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中探針</span>
-      <span style="color:#666; margin-left:8px;">6217</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$278.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">明安</span>
-      <span style="color:#666; margin-left:8px;">8938</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$58.90</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">港建</span>
-      <span style="color:#666; margin-left:8px;">3093</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$58.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">精材</span>
-      <span style="color:#666; margin-left:8px;">3374</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$200.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">太醫</span>
-      <span style="color:#666; margin-left:8px;">4126</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$79.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">上詮</span>
-      <span style="color:#666; margin-left:8px;">3363</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$769.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華新</span>
-      <span style="color:#666; margin-left:8px;">1605</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$30.15</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 50.26</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">新晶投控</span>
-      <span style="color:#666; margin-left:8px;">3713</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$14.85</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">廣運</span>
-      <span style="color:#666; margin-left:8px;">6125</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$55.80</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">山富</span>
-      <span style="color:#666; margin-left:8px;">2743</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$71.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">五福</span>
-      <span style="color:#666; margin-left:8px;">2745</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$102.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">易飛網</span>
-      <span style="color:#666; margin-left:8px;">2734</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$16.45</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">元大台灣50</span>
-      <span style="color:#666; margin-left:8px;">0050</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$90.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 84.08</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">凱基台灣TOP50</span>
-      <span style="color:#666; margin-left:8px;">00922</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$33.82</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 83.97</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ RSI極度過買，回檔風險高</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中信數位</span>
-      <span style="color:#666; margin-left:8px;">009819</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$9.94</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #FF9800; background:#fff8e1; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">永豐中國科技50%</span>
-      <span style="color:#666; margin-left:8px;">00887</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$14.58</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#FF9800; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">可以觀察</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: N/A</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>📊 無</li></ul>
-</div>
-    </div>
-  </div>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
+</div></div></div>
 </div>
 
 <div class="section">
-  <div class="section-title">🔴 建議賣出 / 偏空（共 24 檔）</div>
-  <button class="toggle-btn secondary" onclick="document.getElementById('sell-list').classList.toggle('hidden'); this.textContent=document.getElementById('sell-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
-  <div id="sell-list" class="hidden">
-    <div style="display:grid; gap:10px;">
-    <div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華碩</span>
-      <span style="color:#666; margin-left:8px;">2357</span>
-    </div>
+  <div class="section-title">🔴 建議賣出 / 偏空（共 8 檔）</div>
+  <button class="toggle-btn secondary" onclick="document.getElementById('sell-list').classList.toggle('hidden');this.textContent=document.getElementById('sell-list').classList.contains('hidden')?'展開清單':'收合清單'">收合清單</button>
+  <div id="sell-list" class="hidden"><div style="display:grid;gap:10px;"><div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">00730</span><span style="color:#666;margin-left:8px;">00730</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$581.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$25</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 61.82</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">偏空觀望</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 70.8</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 197K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">力積電</span>
-      <span style="color:#666; margin-left:8px;">6770</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2061</span><span style="color:#666;margin-left:8px;">2061</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$51.90</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$20</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 46.18</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">偏空觀望</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 75.6</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 890K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD黃金交叉，買盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ RSI過買，可能過熱</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華南金</span>
-      <span style="color:#666; margin-left:8px;">2880</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2063</span><span style="color:#666;margin-left:8px;">2063</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$32.05</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$26</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 38.75</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">偏空觀望</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 19.6</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 15K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線空頭排列，趨勢向下</li><li>✅ RSI超賣，股價可能被低估</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">萬海</span>
-      <span style="color:#666; margin-left:8px;">2615</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2067</span><span style="color:#666;margin-left:8px;">2067</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$74.60</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$7</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🔴 高風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 35.09</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">偏空觀望</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 41.6</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 131K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>📊 無明顯訊號</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">慧洋-KY</span>
-      <span style="color:#666; margin-left:8px;">2637</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2035</span><span style="color:#666;margin-left:8px;">2035</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$71.70</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$28</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 60.33</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議賣出</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 43.7</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 2K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線空頭排列，趨勢向下</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中鼎</span>
-      <span style="color:#666; margin-left:8px;">9933</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2065</span><span style="color:#666;margin-left:8px;">2065</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$36.75</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$29</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 55.79</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議賣出</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 31.5</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 233K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線空頭排列，趨勢向下</li><li>✅ RSI偏低，低於40</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">正新</span>
-      <span style="color:#666; margin-left:8px;">2105</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2066</span><span style="color:#666;margin-left:8px;">2066</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$31.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$46</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟡 中風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 47.33</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議賣出</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 37.3</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 54K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線空頭排列，趨勢向下</li><li>✅ RSI偏低，低於40</li></ul>
 </div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">威致</span>
-      <span style="color:#666; margin-left:8px;">2028</span>
-    </div>
+<div class="stock-card" style="border-left:4px solid #F44336;background:#ffebee;padding:14px 16px;margin-bottom:12px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div><span style="font-size:1.1rem;font-weight:bold;">2073</span><span style="color:#666;margin-left:8px;">2073</span></div>
     <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$17.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
+      <span style="font-size:1.2rem;font-weight:bold;">$26</span>
+      <span style="margin-left:8px;font-size:0.85rem;">🟢 低風險</span>
     </div>
   </div>
   <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 40.85</span>
+    <span style="display:inline-block;background:#F44336;color:white;padding:3px 12px;border-radius:12px;font-size:0.8rem;font-weight:bold;">建議賣出</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">RSI: 43.5</span>
+    <span style="color:#888;font-size:0.78rem;margin-left:8px;">量: 13K</span>
   </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">偉全</span>
-      <span style="color:#666; margin-left:8px;">1465</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$12.10</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 46.15</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">富邦日本</span>
-      <span style="color:#666; margin-left:8px;">00645</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$52.25</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 58.76</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">第一金太空</span>
-      <span style="color:#666; margin-left:8px;">00910</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$64.35</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 63.42</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">廣達</span>
-      <span style="color:#666; margin-left:8px;">2382</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$312.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 65.22</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">華通</span>
-      <span style="color:#666; margin-left:8px;">2313</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$244.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">偏空觀望</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 45.05</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中鋼</span>
-      <span style="color:#666; margin-left:8px;">2002</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$18.75</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 36.36</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">佳龍</span>
-      <span style="color:#666; margin-left:8px;">9955</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$28.90</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 37.98</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中碳</span>
-      <span style="color:#666; margin-left:8px;">1723</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$78.30</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 34.67</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">四維航</span>
-      <span style="color:#666; margin-left:8px;">5608</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$15.20</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 30.19</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">長榮航</span>
-      <span style="color:#666; margin-left:8px;">2618</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$33.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 36.45</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">星宇航空</span>
-      <span style="color:#666; margin-left:8px;">2646</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$20.25</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 31.71</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">光罩</span>
-      <span style="color:#666; margin-left:8px;">2338</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$47.00</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 61.19</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">日勝生</span>
-      <span style="color:#666; margin-left:8px;">2547</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$10.35</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟢 低風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 40.91</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">中石化</span>
-      <span style="color:#666; margin-left:8px;">1314</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$7.42</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 22.30</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">第一銅</span>
-      <span style="color:#666; margin-left:8px;">2009</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$37.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🟡 中風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 32.12</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-<div class="stock-card" style="border-left: 4px solid #F44336; background:#ffebee; padding:14px 16px; margin-bottom:12px; border-radius:8px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-    <div>
-      <span style="font-size:1.1rem; font-weight:bold;">百一</span>
-      <span style="color:#666; margin-left:8px;">6152</span>
-    </div>
-    <div style="text-align:right;">
-      <span style="font-size:1.2rem; font-weight:bold;">$13.50</span>
-      <span style="margin-left:8px; font-size:0.85rem;">🔴 高風險</span>
-    </div>
-  </div>
-  <div style="margin-top:8px;">
-    <span style="display:inline-block; background:#F44336; color:white; padding:3px 12px; border-radius:12px; font-size:0.8rem; font-weight:bold;">建議賣出</span>
-    <span style="color:#888; font-size:0.8rem; margin-left:8px;">RSI: 31.25</span>
-  </div>
-  <ul style="margin:8px 0 0 0; padding-left:20px; font-size:0.82rem; color:#555;"><li>✅ MACD死亡交叉，賣盤轉強</li><li>✅ 均線空頭排列，趨勢向下</li></ul>
-</div>
-    </div>
-  </div>
+  <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.82rem;color:#555;"><li>✅ 均線空頭排列，趨勢向下</li></ul>
+</div></div></div>
 </div>
 
 <div class="disclaimer">
   ⚠️ <b>免責聲明：</b>本報告僅基於技術分析，僅供參考，不構成投資建議。股票投資有風險，過去表現不代表未來結果。請自行承担投資風險。
 </div>
-
 <div class="footer">
-  <p>報告生成時間: 2026-05-02 19:36:56</p>
-
-  <p>數據來源: stocks.db (台股日價格數據) + 口袋證券 ETF API</p>
+  <p>報告生成時間: 2026-05-04 17:56:37</p>
+  <p>數據來源: Yahoo Finance API（.TW / .TWO）｜技術指標: MA5/10/20/60 · RSI · MACD · 布林通道</p>
 </div>
-
 </div>
 </body>
 </html>
